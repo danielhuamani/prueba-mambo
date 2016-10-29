@@ -1,0 +1,81 @@
+body{
+	margin:0;
+}
+
+.container{
+	max-width: 1200px;
+	width:96%;
+	margin:auto;
+}
+
+header{
+	overflow: hidden;
+	padding: 10px 0px;
+	box-shadow: 1px 1px 1px #eee;
+	width:100%;
+}
+header figure{
+	display: block;
+	margin: 0px;
+	float: left;
+}
+
+header h2{
+	font-size: 26px;
+	float: right;
+	margin:0;
+	margin-top: 10px;
+	font-family: 'Muli', sans-serif;
+}
+
+
+
+
+/*******************PAGE DATA*******/
+#pageData{
+
+
+}
+#pageData .title{
+	color: #ce143a;
+	font-family: 'Muli', sans-serif;
+	font-size: 32px;
+	margin:0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#pageData .containter--table table{
+	width:100%;
+	border:1px solid  #eee;
+	border-collapse: collapse;
+}
+/*#pageData .containter--table table thead tr{
+	border-bottom:1px solid  #ce143a;
+}*/
+#pageData .containter--table table thead tr td{
+	padding: 10px;
+    background-color: #ce143a;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+}
+#pageData .containter--table table tbody tr:nth-child(odd) {
+	background: #eee
+}
+/*#pageData .containter--table table tbody tr:hover {
+	background-color: #ce143a;
+}
+#pageData .containter--table table tbody tr:hover td{
+	color:white;
+}*/
+
+#pageData .containter--table table tbody tr td {
+	font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    padding: 10px 0px 10px 10px;
+}
+#pageData .containter--table table tbody tr td img{
+	cursor:pointer;
+}
