@@ -19,16 +19,24 @@
         <section id="pageData">
             <div class="container">
                 <h1 class="title">Agenda</h1>
-                <div class="containter--table">
+                <div class="update-agenda">
+                    <form action="" enctype="multipart/form-data"  method="POST">
+                        <label for="">Subir Archivo</label>
+                        <input type="file" name="agenda">
+                        <button type="submit" name="insertar">Registrar</button>
+                    </form>
+
+                </div>
+                <div class="containter--table" id="tableMambo">
                     <table>
                         <thead>
                             <tr>
-                                <td><strong>Nombre</strong></td>
-                                <td><strong>Apellido</strong></td>
-                                <td><strong>Dirección</strong></td>
-                                <td><strong>Celular</strong></td>
-                                <td><strong>Teléfono</strong></td>
-                                <td><strong>Avatar</strong></td>
+                                <td data-td="nombre">Nombre</td>
+                                <td data-td="apellido">Apellido</td>
+                                <td data-td="direccion">Dirección</td>
+                                <td data-td="celular">Celular</td>
+                                <td data-td="telefono">Teléfono</td>
+                                <td data-td="avatar">Avatar</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -441,8 +449,35 @@
         </section>
 
     </div>
+    <section id="pageModal">
+        <div class="container--modal" >
 
+            <div class="close">
+                X
+            </div>
+            <img src="" alt="" id="imageFull">
+
+        </div>
+
+    </section>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="static/js/tableMambo.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        $("#pageData tbody tr").click(function(event) {
+            /* Act on the event */
+            $("#pageModal").toggleClass("pageModal--active");
+            var image = $(this).find('img').attr('src');
+            $("#imageFull").attr('src', image);
+        });
+        $(".close").click(function(event) {
+            /* Act on the event */
+            $("#pageModal").removeClass("pageModal--active");
+        });
+
+        $("#tableMambo").tableMambo()
+    });
+    </script>
 </body>
 </html>
